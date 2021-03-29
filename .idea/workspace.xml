@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b136076d-4500-4972-8f85-e8676e47d09f" name="Default Changelist" comment="" />
+    <list default="true" id="b136076d-4500-4972-8f85-e8676e47d09f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Messanger_Application.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,17 +38,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617009826288</updated>
-      <workItem from="1617009830344" duration="472000" />
+      <workItem from="1617009830344" duration="1072000" />
     </task>
+    <task id="LOCAL-00001" summary="Moved messanger app to sub directory">
+      <created>1617010553066</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617010553066</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Moved messanger app to sub directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved messanger app to sub directory" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2" timestamp="1617010552921">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1617010552921" />
+    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl" timestamp="1617010876755">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1617010876755" />
     <state x="359" y="34" width="1280" height="1046" key="SettingsEditor" timestamp="1617010011178">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="359" y="34" width="1280" height="1046" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1617010011178" />
+    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2" timestamp="1617010556865">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1617010556865" />
+    <state x="153" y="81" width="1671" height="949" key="new project wizard" timestamp="1617010904952">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="153" y="81" width="1671" height="949" key="new project wizard/67.34.1853.1046@67.34.1853.1046" timestamp="1617010904952" />
   </component>
 </project>
