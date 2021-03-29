@@ -1,5 +1,6 @@
 package com.self.restfulwebservices.user;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class UserController {
 	// input - details of user
 	// output - CREATED & Return the created URI
 	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user) {
+	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser = userDaoService.save(user);
 		// CREATED
 		// /user/{id}     savedUser.getId()

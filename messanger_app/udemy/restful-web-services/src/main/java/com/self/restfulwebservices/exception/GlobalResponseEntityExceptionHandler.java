@@ -3,8 +3,10 @@ package com.self.restfulwebservices.exception;
 import java.util.Date;
 
 import com.self.restfulwebservices.model.ExceptionResponse;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,4 +31,10 @@ public class GlobalResponseEntityExceptionHandler extends ResponseEntityExceptio
 		return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
 
+	@Override protected ResponseEntity<Object> handleMethodArgumentNotValid(final MethodArgumentNotValidException ex, final HttpHeaders headers,
+																																					final HttpStatus status,
+																																					final WebRequest request) {
+		ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(), ex.getBindingResult().toString());
+		return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
+	}
 }
