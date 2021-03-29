@@ -7,6 +7,8 @@ import java.util.List;
 import com.self.restfulwebservices.exception.UserNotFoundException;
 import com.self.restfulwebservices.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,13 +30,18 @@ public class UserController {
 	}
 
 	@GetMapping("/users/{id}")
-	public User retrieveUser(@PathVariable int id) {
+	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		User user = userDaoService.findOne(id);
 		
-		if(user==null)
-			throw new UserNotFoundException("id-"+ id);
-		
-		return user;
+		if(user==null) {
+			throw new UserNotFoundException("id-" + id);
+		}
+
+		EntityModel<User> entityModel = EntityModel.of(user);
+		WebMvcLinkBuilder webMvcLinkBuilder = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).retrieveAllUsers());
+		entityModel.add(webMvcLinkBuilder.withRel("all-users"));
+
+		return entityModel;
 	}
 
 	@DeleteMapping("/users/{id}")
@@ -45,15 +52,12 @@ public class UserController {
 			throw new UserNotFoundException("id-"+ id);		
 	}
 
-	//
 	// input - details of user
 	// output - CREATED & Return the created URI
 	@PostMapping("/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser = userDaoService.save(user);
-		// CREATED
-		// /user/{id}     savedUser.getId()
-		
+
 		URI location = ServletUriComponentsBuilder
 			.fromCurrentRequest()
 			.path("/{id}")
