@@ -1,4 +1,4 @@
-package com.self.restfulwebservices.model;
+package com.self.restfulwebservices.exception.model;
 
 import java.util.Date;
 

@@ -1,11 +1,12 @@
-package com.self.restfulwebservices.user;
+package com.self.restfulwebservices.user.controller;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
 import com.self.restfulwebservices.exception.UserNotFoundException;
-import com.self.restfulwebservices.model.User;
+import com.self.restfulwebservices.user.service.UserDaoService;
+import com.self.restfulwebservices.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;

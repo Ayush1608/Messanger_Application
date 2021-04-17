@@ -1,5 +1,5 @@
 
-package com.self.restfulwebservices.model;
+package com.self.restfulwebservices.user.model;
 
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;

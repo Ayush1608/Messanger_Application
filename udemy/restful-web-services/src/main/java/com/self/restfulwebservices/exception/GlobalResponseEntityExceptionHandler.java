@@ -2,7 +2,7 @@ package com.self.restfulwebservices.exception;
 
 import java.util.Date;
 
-import com.self.restfulwebservices.model.ExceptionResponse;
+import com.self.restfulwebservices.exception.model.ExceptionResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,11 +1,11 @@
-package com.self.restfulwebservices.user;
+package com.self.restfulwebservices.user.service;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import com.self.restfulwebservices.model.User;
+import com.self.restfulwebservices.user.model.User;
 import org.springframework.stereotype.Component;
 
 @Component

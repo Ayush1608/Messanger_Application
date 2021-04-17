@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b136076d-4500-4972-8f85-e8676e47d09f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Messanger_Application.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -39,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617009826288</updated>
       <workItem from="1617009830344" duration="1072000" />
+      <workItem from="1618055976920" duration="156000" />
     </task>
     <task id="LOCAL-00001" summary="Moved messanger app to sub directory">
       <created>1617010553066</created>
@@ -47,7 +48,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617010553066</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Deleted unnecessary file">
+      <created>1618056059352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618056059352</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,28 +63,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moved messanger app to sub directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved messanger app to sub directory" />
+    <MESSAGE value="Deleted unnecessary file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted unnecessary file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2" timestamp="1617010552921">
+    <state x="447" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618056026422">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1617010552921" />
-    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl" timestamp="1617010876755">
+    <state x="447" y="207" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.34.1853.1046@67.34.1853.1046" timestamp="1618056026422" />
+    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2" timestamp="1618056059172">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1617010876755" />
+    <state x="399" y="84" width="1178" height="943" key="CommitChangelistDialog2/67.34.1853.1046@67.34.1853.1046" timestamp="1618056059172" />
+    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl" timestamp="1618056129791">
+      <screen x="67" y="34" width="1853" height="1046" />
+    </state>
+    <state x="718" y="239" width="530" height="633" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1618056129791" />
     <state x="359" y="34" width="1280" height="1046" key="SettingsEditor" timestamp="1617010011178">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
     <state x="359" y="34" width="1280" height="1046" key="SettingsEditor/67.34.1853.1046@67.34.1853.1046" timestamp="1617010011178" />
-    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2" timestamp="1617010556865">
+    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2" timestamp="1618056064157">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1617010556865" />
-    <state x="153" y="81" width="1671" height="949" key="new project wizard" timestamp="1617010904952">
+    <state x="488" y="229" width="1000" height="654" key="Vcs.Push.Dialog.v2/67.34.1853.1046@67.34.1853.1046" timestamp="1618056064157" />
+    <state x="153" y="81" width="1671" height="949" key="new project wizard" timestamp="1618056107287">
       <screen x="67" y="34" width="1853" height="1046" />
     </state>
-    <state x="153" y="81" width="1671" height="949" key="new project wizard/67.34.1853.1046@67.34.1853.1046" timestamp="1617010904952" />
+    <state x="153" y="81" width="1671" height="949" key="new project wizard/67.34.1853.1046@67.34.1853.1046" timestamp="1618056107287" />
   </component>
 </project>

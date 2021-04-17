@@ -1,4 +1,4 @@
-package com.self.restfulwebservices.model;
+package com.self.restfulwebservices.filtering.model;
 
 
 import com.fasterxml.jackson.annotation.JsonFilter;
