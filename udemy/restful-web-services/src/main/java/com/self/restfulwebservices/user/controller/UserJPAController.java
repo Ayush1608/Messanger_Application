@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 import com.self.restfulwebservices.exception.UserNotFoundException;
+import com.self.restfulwebservices.user.PostJPARepostory;
 import com.self.restfulwebservices.user.UserJPARepository;
+import com.self.restfulwebservices.user.model.Post;
 import com.self.restfulwebservices.user.model.User;
-import com.self.restfulwebservices.user.service.UserDaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +31,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class UserJPAController {
 
 	@Autowired
-	private UserDaoService userDaoService;
+	private PostJPARepostory postJPARepostory;
 
 	@Autowired
 	private UserJPARepository userJPARepository;
@@ -73,5 +75,38 @@ public class UserJPAController {
 		
 		return ResponseEntity.created(location).build();
 		
+	}
+
+	@GetMapping("/users/{id}/posts")
+//	public ResponseEntity<CollectionModel<Post>> getPosts(@PathVariable int id) { Commenting HATEOAS from this method
+	public ResponseEntity<List<Post>> getPosts(@PathVariable int id) {
+		Optional<User> user = userJPARepository.findById(id);
+		if(!user.isPresent()) {
+			throw new UserNotFoundException("id-" + id);
+		}
+
+//		CollectionModel<Post> postCollectionModel = CollectionModel.of(user.get().getPosts());
+//		WebMvcLinkBuilder webMvcLinkBuilder = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).retrieveUser(id));
+//		postCollectionModel.add(webMvcLinkBuilder.withRel("user"));
+//		return ResponseEntity.ok(postCollectionModel);
+
+		return ResponseEntity.ok(user.get().getPosts());
+	}
+
+	@PostMapping("/users/{id}/posts")
+	public ResponseEntity<Object> getPosts(@PathVariable int id, @RequestBody Post post) {
+		Optional<User> user = userJPARepository.findById(id);
+		if(!user.isPresent()) {
+			throw new UserNotFoundException("id-" + id);
+		}
+		post.setUser(user.get());
+		Post savedPost = postJPARepostory.save(post);
+
+		URI location = ServletUriComponentsBuilder
+										 .fromCurrentRequest()
+										 .path("/{id}")
+										 .buildAndExpand(savedPost.getId()).toUri();
+
+		return ResponseEntity.created(location).build();
 	}
 }
